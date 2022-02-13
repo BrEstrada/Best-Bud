@@ -2,7 +2,6 @@
 	"name": "best-bud",
 	"version": "1.0.0",
 	"description": "## CRUD Dashboard for Assessment 01",
-	"main": "index.js",
 	"scripts": {
 		"clean": "rm -rf node_modules .git .parcel-cache dist .DS_Store",
 		"static": "cp -rf ./src/static   dist",
