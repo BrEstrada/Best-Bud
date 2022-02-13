@@ -1,1 +1,3 @@
-import { db } from './libs/firebase/firebaseConfig'; // Build fails when importing this...
+import { db } from './libs/firebase/firebaseConfig';
+
+console.log(db);
