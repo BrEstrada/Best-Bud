@@ -1,0 +1,24 @@
+{
+  "name": "best-bud",
+  "version": "1.0.0",
+  "description": "## CRUD Dashboard for Assessment 01",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrEstrada/Best-Bud.git"
+  },
+  "author": "Brandon Estrada",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrEstrada/Best-Bud/issues"
+  },
+  "homepage": "https://github.com/BrEstrada/Best-Bud#readme",
+  "dependencies": {
+    "firebase": "^9.6.6",
+    "nanoid": "^3.2.0",
+    "parcel": "^2.3.1"
+  }
+}
