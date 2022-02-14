@@ -56,4 +56,5 @@ async function uploadNewProduct() {
 	});
 
 	document.getElementById('upload-alert').removeAttribute('hidden');
+	window.location.assign('index.html');
 }
