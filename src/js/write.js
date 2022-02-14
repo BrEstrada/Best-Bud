@@ -43,6 +43,7 @@ async function uploadNewProduct() {
 	const storagePath = uploadResult.metadata.fullPath;
 
 	// firebase unique key
+	// push returns a ref to an area with a unique key but no data written yet (not used for update)
 	const itemRef = await push(dataRef);
 
 	set(itemRef, {

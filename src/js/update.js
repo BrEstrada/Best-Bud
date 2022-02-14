@@ -11,7 +11,7 @@ const productForm = document.forms['productForm'];
 async function pageInit() {
 	const key = sessionStorage.getItem('key');
 	console.log('update page');
-	console.log(key);
+	// console.log(key);
 	const productRef = databaseRef(db, `products/${key}`);
 	const productSnapShot = await get(productRef);
 
@@ -24,11 +24,26 @@ async function pageInit() {
 
 function onUpdateProduct(e) {
 	e.preventDefault();
+	updateProductData();
 }
 
-function setFieldValues({ name, urlPath }) {
+function setFieldValues({ name, urlPath, price, type }) {
 	productForm.elements['productName'].value = name;
 	document.querySelector('#uploadImage img').src = urlPath;
+	productForm.elements['productPrice'].value = price;
+	productForm.elements['productType'].value = type;
+}
+
+function updateProductData() {
+	const key = sessionStorage.getItem('key');
+	const productName = e.target.elements['productName'].value.trim();
+	const file = e.target.elements['productImage'].files;
+	const price = document.querySelector('#productPrice').value;
+	const type = document.querySelector('#productType').value;
+	if (file.length !== 0) {
+		// format storage for the new image
+		const imageRef = storageRef(storage, `images/`);
+	}
 }
 
 pageInit();
