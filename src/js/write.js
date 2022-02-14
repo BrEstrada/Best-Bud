@@ -30,8 +30,28 @@ async function uploadNewProduct() {
 	const type = document.querySelector('#productType').value;
 
 	// paths to the data to write
+	const imageRef = storageRef(storage, `images/$(file.name)`);
+	const dataRef = databaseRef(db, 'products');
+
 	// upload file to storage bucket
+	const uploadRequest = await uploadBytes(imageRef, file);
+
 	// url to the image stored in the storage bucket
+	const urlPath = await getDownloadURL(imageRef);
+
 	// path on the storage bucket to the image
+	const storagePath = uploadResult.metadata.fullPath;
+
 	// firebase unique key
+	const itemRef = await push(dataRef);
+
+	set(itemRef, {
+		key: itemRef.key,
+		sku: `best$(itemRef.key)`,
+		urlPath,
+		storagePath,
+		name,
+		type,
+		price,
+	});
 }
