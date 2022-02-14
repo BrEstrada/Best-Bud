@@ -30,7 +30,7 @@ function onUpdateProduct(e) {
 function setFieldValues({ name, urlPath, price, type }) {
 	productForm.elements['productName'].value = name;
 	document.querySelector('#uploadImage img').src = urlPath;
-	productForm.elements['productPrice'].value = price;
+	productForm.elements['productPrice'].value = price / 100;
 	productForm.elements['productType'].value = type;
 }
 
