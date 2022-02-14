@@ -54,4 +54,6 @@ async function uploadNewProduct() {
 		type,
 		price,
 	});
+
+	document.getElementById('upload-alert').removeAttribute('hidden');
 }
