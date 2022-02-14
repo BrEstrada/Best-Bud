@@ -35,7 +35,6 @@ function setFieldValues({ name, urlPath, price, type }) {
 }
 
 function updateProductData() {
-	const key = sessionStorage.getItem('key');
 	const productName = e.target.elements['productName'].value.trim();
 	const file = e.target.elements['productImage'].files;
 	const price = document.querySelector('#productPrice').value;
@@ -44,6 +43,12 @@ function updateProductData() {
 		// format storage for the new image
 		const imageRef = storageRef(storage, `images/`);
 	}
+	const key = sessionStorage.getItem('key');
+	const dataRef = databaseRef(db, `products/${key}`);
+
+	set(dataRef, {
+		// update data
+	});
 }
 
 pageInit();
