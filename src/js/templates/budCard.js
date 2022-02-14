@@ -8,7 +8,9 @@ function budCard({ key, name, urlPath, price, type }) {
 			<div class="card-body d-flex flex-column">
                 <div class="text-center mt-auto">
                     <h5 class="card-title">${name}</h5>
-                    <h6 class="card-subtitle mb-1 text-muted">$${price}</h6>
+                    <h6 class="card-subtitle mb-1 text-muted">$${
+						price / 100
+					}</h6>
                     <p class="card-text">${type}</p>
 					<a href="#" class="btn btn-primary" id="edit">Edit</a>
 					<a href="#" class="btn btn-danger" id="delete">Delete</a>

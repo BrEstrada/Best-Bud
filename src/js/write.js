@@ -52,7 +52,7 @@ async function uploadNewProduct() {
 		storagePath,
 		name,
 		type,
-		price,
+		price: Math.round(parseFloat(price).toFixed(2) * 100),
 	});
 
 	document.getElementById('upload-alert').removeAttribute('hidden');
