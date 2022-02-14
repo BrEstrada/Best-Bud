@@ -30,11 +30,11 @@ async function uploadNewProduct() {
 	const type = document.querySelector('#productType').value;
 
 	// paths to the data to write
-	const imageRef = storageRef(storage, `images/$(file.name)`);
+	const imageRef = storageRef(storage, `images/${file.name}`);
 	const dataRef = databaseRef(db, 'products');
 
 	// upload file to storage bucket
-	const uploadRequest = await uploadBytes(imageRef, file);
+	const uploadResult = await uploadBytes(imageRef, file);
 
 	// url to the image stored in the storage bucket
 	const urlPath = await getDownloadURL(imageRef);
@@ -47,7 +47,7 @@ async function uploadNewProduct() {
 
 	set(itemRef, {
 		key: itemRef.key,
-		sku: `best$(itemRef.key)`,
+		sku: `best${itemRef.key}`,
 		urlPath,
 		storagePath,
 		name,
