@@ -4,12 +4,12 @@ function budCard({ key, name, urlPath, price, type }) {
 	const template = `
     <div class="col-md-4 d-flex align-self-stretch">
         <div class="card mb-4 box-shadow" style="width: 18rem;">
-			<img class="card-img-top" src="${urlPath}" alt="Card image cap">
+			<img class="card-img-top" src="${urlPath}" alt="${name}">
 			<div class="card-body d-flex flex-column">
-				<h5 class="card-title">Product</h5>
-				<h6 class="card-subtitle mb-1 text-muted">$25</h6>
-				<p class="card-text">Indica</p>
                 <div class="text-center mt-auto">
+                    <h5 class="card-title">${name}</h5>
+                    <h6 class="card-subtitle mb-1 text-muted">$${price}</h6>
+                    <p class="card-text">${type}</p>
 					<a href="#" class="btn btn-primary" id="edit">Edit</a>
 					<a href="#" class="btn btn-danger" id="delete">Delete</a>
                 </div>
