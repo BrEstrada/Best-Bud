@@ -17,225 +17,170 @@
 		<script type="module" src="js/update.js"></script>
 	</head>
 	<body>
-		<div class="container">
-			<header
-				class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom"
+		<header
+			class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow"
+		>
+			<a
+				class="navbar-brand col-md-3 col-lg-2 me-0 px-3 m-1"
+				href="index.html"
 			>
-				<a
-					href="index.html"
-					class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none"
+				<img
+					src="static/svg/best-bud-logo.svg"
+					alt="Best Bud Logo"
+					width="100"
+				/>
+			</a>
+			<button
+				class="navbar-toggler position-absolute d-md-none collapsed"
+				type="button"
+				data-bs-toggle="collapse"
+				data-bs-target="#sidebarMenu"
+				aria-controls="sidebarMenu"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="navbar-nav">
+				<div class="nav-item text-nowrap">
+					<a class="nav-link px-3" href="#">Logout</a>
+				</div>
+			</div>
+		</header>
+
+		<div class="container-fluid">
+			<div class="row">
+				<nav
+					id="sidebarMenu"
+					class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse"
 				>
-					<svg
-						width="175"
-						version="1.1"
-						viewBox="0 0 73.409 32.503"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<g
-							transform="translate(-72.835 -101.21)"
-							display="none"
-						>
-							<rect
-								x="36.831"
-								y="77.341"
-								width="134.94"
-								height="71.438"
-								fill="#fff"
-							/>
-						</g>
-						<g transform="translate(-72.835 -101.21)">
-							<text
-								transform="scale(.26458)"
-								fill="#000000"
-								font-family="sans-serif"
-								font-size="40px"
-								style="
-									line-height: 1.25;
-									shape-inside: url(#rect3531);
-									white-space: pre;
-								"
-								xml:space="preserve"
-							/>
-							<g
-								fill="#e9f0e7"
-								stroke="#96c447"
-								stroke-width=".33142"
-							>
-								<path
-									d="m73 116.93v-15.27h7.1685q4.0203 0 5.9565 1.1868 1.9658 1.2165 1.9658 3.1451 0 2.8681-4.2567 3.1055 2.424 0.23736 3.5473 1.0681 1.1381 0.83077 1.1381 2.3934 0 1.9681-1.9067 3.1648-1.8919 1.2066-4.981 1.2066zm6.1634-3.3132q0.17736 0.01 0.31039 0.0198 0.13302 0 0.22171 0 1.1529 0 1.8328-0.40549 0.69468-0.4055 0.69468-1.0879t-0.69468-1.0681q-0.6799-0.38571-1.8771-0.38571h-0.48775zm0-6.0231h0.41385q1.1085 0 1.7441-0.34615 0.65034-0.34616 0.65034-0.96924 0-1.3253-2.1727-1.3253-0.10346 0-0.26605 0.01-0.1478 0-0.36951 0.01z"
-								/>
-								<path
-									d="m90.504 116.93v-15.27h11.455v3.5901h-5.2914v2.2253h4.7445v3.4516h-4.7445v2.3341h5.2914v3.6692z"
-								/>
-								<path
-									d="m103.45 116.55v-4.7967q1.818 1.6616 3.9316 1.6616 0.79814 0 1.3007-0.27693 0.50253-0.28681 0.50253-0.71208 0-0.61319-1.0938-1.1967l-1.0051-0.52418q-1.0051-0.5044-1.7145-0.9989-0.70946-0.5044-1.1529-1.0286-0.44341-0.53407-0.65034-1.0978-0.20692-0.56374-0.20692-1.1868 0-1.0681 0.73902-2.2352 0.36951-0.54396 0.85726-0.98902 0.48775-0.45494 1.1233-0.8011 1.7441-0.98902 4.2124-0.98902 2.2023 0 4.4341 0.78133v4.6681q-0.75379-0.78132-1.7145-1.2264-0.96072-0.45494-1.8919-0.45494-0.70946 0-1.1676 0.27692-0.47297 0.26703-0.47297 0.64286 0 0.61319 1.2563 1.2165l0.9755 0.48461q1.951 0.93957 2.7935 1.9286 0.85726 0.98901 0.85726 2.3143 0 2.255-2.0545 3.7187t-5.2027 1.4637q-2.1727 0-4.6558-0.64286z"
-								/>
-								<path
-									d="m125.92 116.93h-6.1634v-11.611h-3.3995v-3.6594h13.095v3.6594h-3.5325z"
-								/>
-								<g
-									transform="scale(1.2225 .81801)"
-									aria-label="BUD"
+					<div class="position-sticky pt-3">
+						<ul class="nav flex-column">
+							<li class="nav-item">
+								<a
+									class="nav-link active"
+									aria-current="page"
+									href="index.html"
 								>
-									<path
-										d="m62.403 162.95v-17.99h5.651q3.1692 0 4.6955 1.3982 1.5496 1.4331 1.5496 3.7052 0 3.3789-3.3556 3.6586 1.9108 0.27964 2.7964 1.2584 0.89716 0.97873 0.89716 2.8197 0 2.3186-1.503 3.7285-1.4914 1.4215-3.9265 1.4215zm4.8587-3.9032q0.13982 0.0117 0.24468 0.0233 0.10486 0 0.17477 0 0.90881 0 1.4448-0.47771 0.54762-0.47771 0.54762-1.2817 0-0.80396-0.54762-1.2584-0.53597-0.45441-1.4797-0.45441h-0.3845zm0-7.0957h0.32624q0.87386 0 1.3749-0.4078 0.51266-0.4078 0.51266-1.1418 0-1.5613-1.7128-1.5613-0.08156 0-0.20973 0.0117-0.11651 0-0.29129 0.0117z"
-									/>
-									<path
-										d="m83.522 144.96h4.8587v12.723q0 1.5962-0.50101 2.5866-0.48936 1.037-1.6312 1.8759-1.538 1.1185-3.7401 1.1185-2.4934 0-4.1829-1.235-2.1439-1.573-2.1439-5.0334v-12.036h4.8587v11.605q0 1.1768 0.27964 1.6662 0.29129 0.48936 0.96707 0.48936 0.69909 0 0.96707-0.4544 0.26798-0.47771 0.26798-1.6895z"
-									/>
-									<path
-										d="m90.369 162.95v-17.99h4.1945q3.6003 0 5.6044 1.9342 2.6332 2.5284 2.6332 7.0724 0 4.4742-2.2254 6.9093-1.8992 2.074-5.6626 2.074zm4.8587-4.346q2.6099-0.12817 2.6099-4.4975 0-2.1555-0.66413-3.4022-0.66413-1.2584-1.7943-1.2584h-0.15147z"
-									/>
-								</g>
-							</g>
-							<g
-								transform="matrix(1.2781 0 0 1.0625 -32.675 -7.0825)"
-							>
-								<g fill="#e9f0e7" stroke="#96c447">
-									<ellipse
-										cx="130.84"
-										cy="120.64"
-										rx="1.7114"
-										ry="6.9419"
-										stroke-width=".38266"
-									/>
-									<ellipse
-										transform="matrix(.87515 .48385 -.51632 .8564 0 0)"
-										cx="178.19"
-										cy="42.348"
-										rx="1.7071"
-										ry="6.0034"
-										stroke-width=".35541"
-									/>
-									<ellipse
-										transform="matrix(-.87515 .48385 .51632 .8564 0 0)"
-										cx="-45.983"
-										cy="169"
-										rx="1.7071"
-										ry="6.0034"
-										stroke-width=".35541"
-									/>
-									<ellipse
-										transform="matrix(.26946 .96301 -.96862 .24854 0 0)"
-										cx="155.88"
-										cy="-96.346"
-										rx="1.4325"
-										ry="4.6051"
-										stroke-width=".35532"
-									/>
-									<ellipse
-										transform="matrix(-.26946 .96301 .96862 .24854 0 0)"
-										cx="90.846"
-										cy="155.64"
-										rx="1.4325"
-										ry="4.6051"
-										stroke-width=".35532"
-									/>
-									<ellipse
-										transform="matrix(-.72225 .69164 -.72225 -.69164 0 0)"
-										cx="1.6896"
-										cy="-186.14"
-										rx=".95"
-										ry="3.3778"
-										stroke-width=".35545"
-									/>
-									<ellipse
-										transform="matrix(.72225 .69164 .72225 -.69164 0 0)"
-										cx="182.78"
-										cy="-5.0544"
-										rx=".95"
-										ry="3.3778"
-										stroke-width=".35545"
-									/>
-								</g>
-							</g>
-						</g>
-					</svg>
-				</a>
+									Products
+								</a>
+							</li>
+							<!-- <li class="nav-item">
+								<a class="nav-link" href="#">
+									<span data-feather="file"></span>
+									Delete
+								</a>
+							</li> -->
+						</ul>
 
-				<ul
-					class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0"
-				>
-					<li>
-						<a href="index.html" class="nav-link px-2 link-dark"
-							>Home</a
+						<h6
+							class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted"
 						>
-					</li>
-					<li>
-						<a href="write.html" class="nav-link px-2 link-dark"
-							>Add Products</a
-						>
-					</li>
-					<li>
-						<a href="update.html" class="nav-link px-2 link-success"
-							>Update Products</a
-						>
-					</li>
-					<li>
-						<a href="#" class="nav-link px-2 link-dark"
-							>Delete Products</a
-						>
-					</li>
-				</ul>
-
-				<div class="col-md-3 text-end">
-					<!-- <button type="button" class="btn btn-outline-primary me-2">Login</button> -->
-					<button type="button" class="btn btn-outline-secondary">
-						Logout
-					</button>
-				</div>
-			</header>
-		</div>
-		<main class="container">
-			<form id="productForm" class="col-md-5">
-				<div class="form-group mb-3">
-					<div class="mb-3 display">
-						<img src="static/images/default.png" alt="default" />
+							<span>Manage Products</span>
+						</h6>
+						<ul class="nav flex-column mb-2">
+							<li class="nav-item">
+								<a class="nav-link" href="write.html"> Add </a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="update.html">
+									Edit
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="delete.html">
+									Delete
+								</a>
+							</li>
+						</ul>
 					</div>
-					<label for="productImage" class="btn btn-outline-secondary"
-						>Select Image</label
+				</nav>
+
+				<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+					<div
+						class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
 					>
-					<input
-						type="file"
-						id="productImage"
-						class="form-contro-file"
-						style="display: none"
-						accept=".jpg, .png, .jpeg, .webp"
-					/>
-				</div>
-				<div class="mb-3">
-					<label for="productName">Product Name:</label>
-					<input
-						type="text"
-						class="form-control"
-						id="productName"
-						placeholder="Product Name"
-					/>
-				</div>
-				<div class="mb-3">
-					<label for="productPrice">Product Price:</label>
-					<input
-						type="number"
-						min="0"
-						step="1"
-						class="form-control"
-						id="productPrice"
-						placeholder="0"
-					/>
-				</div>
-				<div class="form-group mb-3">
-					<label for="productType">Type:</label>
-					<select class="form-select" id="productType">
-						<option>Indica</option>
-						<option>Hybrid</option>
-						<option>Sativa</option>
-					</select>
-				</div>
-				<button class="btn btn-primary form-control" type="submit">
-					Add Product
-				</button>
-			</form>
-		</main>
+						<h1 class="h2">Dashboard</h1>
+						<div class="btn-toolbar mb-2 mb-md-0">
+							<div class="btn-group me-2">
+								<a
+									href="index.html"
+									type="button"
+									class="btn btn-sm btn-outline-secondary"
+								>
+									Home
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<h2>Update Product</h2>
+					<!-- CONTENT -->
+					<form id="productForm" class="col-md-5 mb-3">
+						<div class="form-group mb-3">
+							<div class="mb-3 display">
+								<img
+									src="static/images/default.png"
+									alt="default"
+								/>
+							</div>
+							<label
+								for="productImage"
+								class="btn btn-outline-secondary"
+								>Select Image</label
+							>
+							<input
+								type="file"
+								id="productImage"
+								class="form-contro-file"
+								style="display: none"
+								accept=".jpg, .png, .jpeg, .webp"
+							/>
+						</div>
+						<div class="mb-3">
+							<label for="productName">Product Name:</label>
+							<input
+								type="text"
+								class="form-control"
+								id="productName"
+								placeholder="Product Name"
+							/>
+						</div>
+						<div class="mb-3">
+							<label for="productPrice">Product Price:</label>
+							<input
+								type="number"
+								min="0"
+								step="0.01"
+								class="form-control"
+								id="productPrice"
+								placeholder="0"
+							/>
+						</div>
+						<div class="form-group mb-3">
+							<label for="productType">Type:</label>
+							<select class="form-select" id="productType">
+								<option>Indica</option>
+								<option>Hybrid</option>
+								<option>Sativa</option>
+							</select>
+						</div>
+
+						<button class="btn btn-primary mb-3" type="submit">
+							Add Product
+						</button>
+					</form>
+					<div
+						class="alert alert-primary col-md-5"
+						id="upload-alert"
+						hidden
+					>
+						<p>Updated Product</p>
+					</div>
+					<!-- END Content -->
+				</main>
+			</div>
+		</div>
 
 		<!-- Bootstrap Bundle with Popper -->
 		<script
