@@ -34,7 +34,7 @@ function setFieldValues({ name, urlPath, price, type }) {
 	productForm.elements['productType'].value = type;
 }
 
-function updateProductData() {
+async function updateProductData(e) {
 	const productName = e.target.elements['productName'].value.trim();
 	const file = e.target.elements['productImage'].files;
 	const price = document.querySelector('#productPrice').value;
@@ -48,6 +48,13 @@ function updateProductData() {
 
 	set(dataRef, {
 		// update data
+		key: itemRef.key,
+		sku: `best${itemRef.key}`,
+		urlPath,
+		storagePath,
+		name: productName,
+		type,
+		price: Math.round(parseFloat(price).toFixed(2) * 100),
 	});
 }
 
